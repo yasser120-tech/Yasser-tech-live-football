@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixtures - YASSER TECH SPORTS</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="sidebar">
+<h2>YASSER TECH LIVE SPORTS</h2>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="live-scores.html">Live Scores</a></li>
+<li><a href="fixtures.html" class="active">Fixtures</a></li>
+<li><a href="standings.html">Standings</a></li>
+<li><a href="highlights.html">Highlights</a></li>
+</ul>
+</nav>
+
+<main>
+<section>
+<h2>Upcoming Fixtures</h2>
+<div class="grid" id="fixturesContainer"></div>
+</section>
+</main>
+
+<a class="whatsapp-btn" href="https://whatsapp.com/channel/0029Vb7BkaP7dmeg0yZiCS1I" target="_blank">📲 WhatsApp Channel</a>
+<script>
+let fixtures = [
+  {home:"Liverpool",away:"Chelsea",league:"Premier League",date:"2026-01-20",stream:"#"},
+  {home:"Barcelona",away:"Atletico Madrid",league:"La Liga",date:"2026-01-21",stream:"#"},
+  {home:"Juventus",away:"Inter Milan",league:"Serie A",date:"2026-01-22",stream:"#"}
+];
+
+const container=document.getElementById("fixturesContainer");
+fixtures.forEach(f=>{
+  container.innerHTML+=`<div class="card">
+  <div class="info">
+    <h4>${f.home} vs ${f.away}</h4>
+    <small>${f.league} • ${f.date}</small>
+    <a href="${f.stream}" target="_blank">Watch</a>
+  </div></div>`;
+});
+</script>
+</body>
+</html>
